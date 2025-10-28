@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Curso</title>
+    <!-- CSS de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">Estudiantes Sin Curso Asignado</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>CI</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Aquí irían los datos de estudiantes -->
+            <tr>
+                <td>Juan Pérez</td>
+                <td>12345678</td>
+                <td>01/01/2000</td>
+                <td>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#asignarCursoModal">Asignar Curso</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Modal para asignar curso -->
+    <div class="modal fade" id="asignarCursoModal" tabindex="-1" role="dialog" aria-labelledby="asignarCursoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="asignarCursoModalLabel">Asignar Curso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <label for="id_curso">Seleccionar Curso:</label>
+                            <select name="id_curso" class="form-control" required>
+                                <option value="">Seleccione un curso</option>
+                                <option value="1">Curso 1</option>
+                                <option value="2">Curso 2</option>
+                                <option value="3">Curso 3</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Asignar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
